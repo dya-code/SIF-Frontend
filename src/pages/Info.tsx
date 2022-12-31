@@ -1,8 +1,8 @@
 import { SetStateAction, useEffect, useState } from 'react'
 import axios from 'axios'
-// import { format } from 'date-fns'
-import reactLogo from './assets/react.svg'
-
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 function Info() {
   const school_name = sessionStorage.getItem("schoolName")
@@ -19,6 +19,7 @@ function Info() {
 
   return (
     <div className="info flex items-center justify-center flex-col">
+      <Link to={ "/" } className="h-14 p-4 fixed lg:left-[15%] lg:top-[15%] max-[600px]:left-[2%] max-[600px]:top-[2%] rounded-r-2xl text-neutral-400 transition duration-200"><FontAwesomeIcon icon={ faArrowLeft } className="font-bold text-2xl text-neutral-200 transition duration-200 hover:scale-110" /></Link>
       <div className="name-section mb-[50px]">
         <div className="text-neutral-100 text-2xl">{ res.SCHUL_NM }</div>
         <div className="text-neutral-200 text-1xl">{ res.ENG_SCHUL_NM }</div>

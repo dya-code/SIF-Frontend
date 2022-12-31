@@ -25,45 +25,47 @@ function Info() {
       </div>
 
       <div className="info-section flex justify-center items-center">
-        <div className="info-section-l text-xl flex flex-col mr-24 ml-24">
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">학교유형</div>
-            <div className="var">{ res.HS_SC_NM }</div>
-          </div>
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">설립구분</div>
-            <div className="var">{ res.FOND_SC_NM }</div>
+        <div className="flex lg:justify-center sm:justify-start max-[600px]:flex-col max-[900px]:flex-col lg:flex-row">
+          <div className="info-section-l text-xl flex flex-col lg:mr-24 lg:ml-24">
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">학교유형</div>
+              <div className="var">{ res.HS_SC_NM !== null ? res.HS_SC_NM : "-" }</div>
+            </div>
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">설립구분</div>
+              <div className="var">{ res.FOND_SC_NM }</div>
+            </div>
+
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">설립일자</div>
+              <div className="var">{ res.FOND_YMD }</div>
+            </div>
+
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">연락처</div>
+              <div className="var">{ res.ORG_TELNO }</div>
+            </div>
           </div>
 
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">설립일자</div>
-            <div className="var">{ res.FOND_YMD }</div>
-          </div>
+          <div className="info-section-r text-xl flex flex-col">
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">학교주소</div>
+              <div className="var max-[600px]:w-[200px]">{ res.ORG_RDNMA }</div>
+            </div>
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">설립구분</div>
+              <div className="var">{ res.FOND_SC_NM }</div>
+            </div>
 
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">연락처</div>
-            <div className="var">{ res.ORG_TELNO }</div>
-          </div>
-        </div>
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">설립일자</div>
+              <div className="var">{ res.FOND_YMD }</div>
+            </div>
 
-        <div className="info-section-r text-xl flex flex-col">
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">학교주소</div>
-            <div className="var">{ res.ORG_RDNMA }</div>
-          </div>
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">설립구분</div>
-            <div className="var">{ res.FOND_SC_NM }</div>
-          </div>
-
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">설립일자</div>
-            <div className="var">{ res.FOND_YMD }</div>
-          </div>
-
-          <div className="section-card flex items-center justify-start mb-4">
-            <div className="des font-semibold mr-2">연락처</div>
-            <div className="var">{ res.ORG_TELNO }</div>
+            <div className="section-card flex items-center justify-start mb-4">
+              <div className="des font-semibold mr-2">연락처</div>
+              <div className="var">{ res.ORG_TELNO }</div>
+            </div>
           </div>
         </div>
       </div>
